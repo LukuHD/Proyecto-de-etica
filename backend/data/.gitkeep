@@ -1,0 +1,4 @@
+# Directorio de datos persistentes
+# Este directorio almacena la base de datos JSON local del sistema.
+# Los archivos .json en este directorio son generados automáticamente por el servidor.
+# ¡NO editar manualmente los archivos de base de datos!

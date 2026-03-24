@@ -1,0 +1,74 @@
+# ============================================================
+# requirements.txt — Dependencias del Motor Analítico Backend
+# ============================================================
+# Instalar con: pip install -r requirements.txt
+#
+# Para instalación con soporte GPU (CUDA 11.8):
+#   pip install torch --index-url https://download.pytorch.org/whl/cu118
+#   pip install -r requirements.txt
+#
+# Para instalación solo CPU (más ligero, sin aceleración GPU):
+#   pip install -r requirements.txt
+# ============================================================
+
+# ── Framework Web ──────────────────────────────────────────
+# FastAPI: Framework web asíncrono de alto rendimiento
+fastapi>=0.110.0,<1.0.0
+
+# Uvicorn: Servidor ASGI de producción para FastAPI
+uvicorn[standard]>=0.27.0,<1.0.0
+
+# ── Validación de datos ─────────────────────────────────────
+# Pydantic v2: Validación de datos y serialización de esquemas
+pydantic>=2.0.0,<3.0.0
+
+# ── Procesamiento de imágenes ───────────────────────────────
+# Pillow: Manipulación y análisis de imágenes en Python
+Pillow>=10.0.0,<12.0.0
+
+# ── Cliente HTTP ────────────────────────────────────────────
+# httpx: Cliente HTTP asíncrono para descargar imágenes por URL
+httpx>=0.27.0,<1.0.0
+
+# ── Inteligencia Artificial — Core ─────────────────────────
+# PyTorch: Framework de deep learning (CPU por defecto)
+# Para GPU: instalar la versión CUDA correspondiente a tu hardware
+# Ver: https://pytorch.org/get-started/locally/
+torch>=2.1.0
+
+# Transformers: Modelos pre-entrenados de Hugging Face
+# Incluye DistilBERT para NLP y soporte para moondream2 para visión
+transformers>=4.40.0,<5.0.0
+
+# Accelerate: Optimización de carga de modelos en CPU/GPU/multi-GPU
+accelerate>=0.27.0
+
+# ── Fine-tuning (opcionales — solo para aprendizaje continuo) ──
+# Descomenta estas líneas cuando vayas a realizar fine-tuning:
+
+# PEFT: Parameter-Efficient Fine-Tuning (LoRA, QLoRA)
+# peft>=0.10.0
+
+# BitsAndBytes: Cuantización de 4-bit para QLoRA en hardware doméstico
+# bitsandbytes>=0.43.0
+
+# TRL: Transformer Reinforcement Learning (entrenamiento RLHF)
+# trl>=0.8.0
+
+# Datasets: Carga y gestión de datasets de Hugging Face
+# datasets>=2.18.0
+
+# scikit-learn: Métricas de evaluación del modelo
+# scikit-learn>=1.4.0
+
+# ── Utilidades ──────────────────────────────────────────────
+# python-multipart: Soporte para form-data (archivos en HTTP)
+python-multipart>=0.0.9
+
+# aiofiles: I/O de archivos asíncrono (para escrituras no bloqueantes)
+aiofiles>=23.0.0
+
+# ── Testing (solo para desarrollo) ──────────────────────────
+pytest>=8.0.0
+pytest-asyncio>=0.23.0
+httpx>=0.27.0  # También usado para testing de la API
