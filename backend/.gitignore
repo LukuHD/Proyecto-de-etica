@@ -1,0 +1,63 @@
+# ================================================================
+# .gitignore para el backend del Motor Analítico de Desinformación
+# ================================================================
+
+# ── Base de datos local (datos sensibles del usuario) ──────────
+data/analysis_database.json
+data/analysis_database.json.tmp
+data/analysis_database.json.bak*
+data/training_corpus/
+
+# ── Modelos de IA descargados (archivos grandes) ────────────────
+# Los modelos se descargan automáticamente de Hugging Face al primer uso
+*.bin
+*.safetensors
+*.gguf
+*.ggml
+models/
+fine_tuned_model/
+~/.cache/huggingface/
+
+# ── Entorno virtual de Python ───────────────────────────────────
+venv/
+.venv/
+env/
+.env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# ── Archivos de configuración con secretos ──────────────────────
+.env
+.env.local
+.env.production
+
+# ── Artefactos de construcción y distribución ───────────────────
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# ── Herramientas de desarrollo ──────────────────────────────────
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+coverage.xml
+.coverage
+htmlcov/
+
+# ── IDEs ─────────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# ── Sistema operativo ────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Logs ─────────────────────────────────────────────────────────
+*.log
+logs/

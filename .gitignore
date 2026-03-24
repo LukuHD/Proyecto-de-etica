@@ -1,0 +1,29 @@
+# Python artifacts
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+*.egg-info/
+
+# Entornos virtuales
+venv/
+.venv/
+env/
+
+# Datos generados por el servidor (privados del usuario)
+backend/data/analysis_database.json
+backend/data/analysis_database.json.tmp
+backend/data/analysis_database.json.bak*
+backend/data/training_corpus/
+
+# Modelos de IA descargados
+*.bin
+*.safetensors
+*.gguf
+backend/fine_tuned_model/
+
+# IDEs
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
